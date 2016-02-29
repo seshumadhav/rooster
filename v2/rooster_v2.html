@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+          crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+          crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+
+    <script src="js/rooster_v2.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="jumbotron" id="authorize-div" style="display: none">
+        <h1>Are you authorized?</h1>
+        <div class="well">
+            <p>Please connect with your organizational gmail ID and authorize access to Google Calendar API</p>
+            <!--Button for the user to click to initiate auth sequence -->
+            <p>
+                <button id="authorize-button" onclick="handleAuthClick(event)" class="btn btn-primary btn-lg">
+                    Authorize
+                </button>
+            </p>
+        </div>
+    </div>
+
+    <div class='well' id='stats' style="display: none">
+        <h1>Rooster</h1>
+        <div class="well" id="output">
+        </div>
+    </div>
+</div>
+
+<!--Template for a user data -->
+<div class="panel panel-success template" style="display: none">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="heading"></h3>
+    </div>
+    <div class="panel-body" id="body">
+    </div>
+</div>
+<!--/Template-->
+</body>
+
+</html>
