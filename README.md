@@ -14,3 +14,7 @@ Other links and references
 * Where did I start: https://developers.google.com/google-apps/calendar/quickstart/js
 * https://developer.chrome.com/extensions/getstarted
 * Used https://stackedit.io/editor to style README in github markup
+
+Tips & Tricks
+------------
+* You can put breakpoints in the javascript on your chrome js sources, and understand contents of each calendar API object

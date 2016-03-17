@@ -81,6 +81,7 @@ function fetchStats(person) {
         var user = blockFor;
 
         if (calendarId.indexOf('@') == -1) {
+            window.alert(resp + "\n" + calendarId + "\nId: " + resp.id + "\nSummary: " + resp.summary);
             return;
         }
 
