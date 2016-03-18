@@ -76,14 +76,9 @@ function fetchStats(person) {
     });
 
     request.execute(function(resp) {
-        var calendarId = resp.summary;
+        var calendarIdAsPerResp = resp.summary;
         var blockFor = calendarId.split('@')[0];
         var user = blockFor;
-
-        if (calendarId.indexOf('@') == -1) {
-            window.alert(resp + "\n" + calendarId + "\nId: " + resp.id + "\nSummary: " + resp.summary);
-            return;
-        }
 
         var blockHeading = 'Summary (' + calendarId + ')';
         addBlock(blockFor, blockHeading);
